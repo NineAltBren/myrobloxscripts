@@ -16,7 +16,7 @@ local TargetHead = TargetCharacter:WaitForChild("Head")
 
 Humanoid.Sit = true
 
-repeat 
+while Humanoid.Sit == true do
 
 if Up then
 
@@ -30,7 +30,7 @@ end
 
 task.wait() 
 
-until Humanoid.Sit == false
+end
 
 end
 
