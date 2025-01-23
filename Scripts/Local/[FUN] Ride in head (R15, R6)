@@ -16,8 +16,6 @@ local TargetHead = TargetCharacter:WaitForChild("Head")
 
 Humanoid.Sit = true
 
-while Humanoid.Sit == true do
-
 if Up then
 
 RootPart.CFrame = TargetHead.CFrame + Vector3.new(0, TargetHead.Size.Y,0)
@@ -28,9 +26,14 @@ RootPart.CFrame = TargetHead.CFrame
 
 end
 
-task.wait()
+local Weld = Instance.new("WeldConstraint")
+Weld.Part0 = TargetHead
+Weld.Part1 = RootPart
+Weld.Parent = RootPart
 
-end
+repeat task.wait() until Humanoid.Sit == false
+
+Weld:Destroy()
 
 end
 
