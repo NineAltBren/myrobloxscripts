@@ -26,7 +26,7 @@ RootPart.CFrame = TargetHead.CFrame
 
 end
 
-local Weld = Instance.new("WeldConstraint")
+local Weld = Instance.new("Weld")
 Weld.Part0 = Target.Head
 Weld.Part1 = RootPart
 Weld.Parent = RootPart
