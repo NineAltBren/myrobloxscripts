@@ -32,8 +32,6 @@ task.wait()
 
 end
 
-Weld:Destroy()
-
 end
 
 local Gui = Instance.new("ScreenGui")
