@@ -15,7 +15,8 @@ local RootPart = Humanoid.RootPart
 local TargetHead = TargetCharacter:WaitForChild("Head")
 
 Humanoid.Sit = true
-
+RootPart.Anchored = true 
+  
 while Humanoid.Sit == true do
 
 if Up then
@@ -31,6 +32,8 @@ end
 task.wait() 
 
 end
+
+RootPart.Anchored = false
 
 end
 
