@@ -20,6 +20,7 @@ end
 
 RemoveTerrain()
 
+task.spawn(function()
 function Texture()
 for _, item in workspace:GetDescendants() do
 		
@@ -42,3 +43,5 @@ Texture()
 while task.wait(10) do
 Texture()
 end
+
+end)
