@@ -7,7 +7,6 @@ function RemoveTerrain()
 		local MaterialService = game:GetService("MaterialService")
 		
 		local MaterialVariant = Instance.new("MaterialVariant")
-		MaterialVariant.BaseMaterial = Material
 		MaterialVariant.Parent = MaterialService
 		
 		pcall(function()
@@ -31,7 +30,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 		
 		if item:IsA("Texture") or item:IsA("Decal") then
-			if item.Name == "face" or item.Name == "Face" then return end
+			if item.Name == "face" or item.Name == "Face" then continue end
 			item.Transparency = 1
 		end
 		
