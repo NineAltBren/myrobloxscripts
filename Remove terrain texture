@@ -19,9 +19,8 @@ end
 
 RemoveTerrain()
 
-game:GetService("RunService").RenderStepped:Connect(function()
-	
-	for _, item in workspace:GetDescendants() do
+function Texture()
+for _, item in workspace:GetDescendants() do
 		
 		if item:IsA("BasePart") then
 			
@@ -35,5 +34,10 @@ game:GetService("RunService").RenderStepped:Connect(function()
 		end
 		
 	end
-	
-end)
+end
+
+Texture()
+
+while task.wait(10) do
+Texture()
+end
