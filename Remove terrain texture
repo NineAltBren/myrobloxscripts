@@ -1,0 +1,21 @@
+warn("Remove terrain texture by Nineteen_DEV")
+
+function RemoveTerrain()
+	
+	for _, Material in Enum.Material:GetEnumItems() do
+		
+		local MaterialService = game:GetService("MaterialService")
+		
+		local MaterialVariant = Instance.new("MaterialVariant")
+		MaterialVariant.BaseMaterial = Material
+		MaterialVariant.Parent = MaterialService
+		
+		pcall(function()
+			MaterialService:SetBaseMaterialOverride(Material,MaterialVariant.Name)
+		end)
+		
+	end
+	
+end
+
+RemoveTerrain()
