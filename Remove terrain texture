@@ -1,4 +1,4 @@
-warn("Remove terrain texture by Nineteen_DEV")
+warn("Antilag texture remover by Nineteen_DEV")
 
 function RemoveTerrain()
 	
@@ -19,3 +19,22 @@ function RemoveTerrain()
 end
 
 RemoveTerrain()
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	
+	for _, item in workspace:GetDescendants() do
+		
+		if item:IsA("BasePart") then
+			
+			item.Material = Enum.Material.SmoothPlastic
+			
+		end
+		
+		if item:IsA("Texture") or item:IsA("Decal") then
+			if item.Name == "face" or item.Name == "Face" then return end
+			item.Transparency = 1
+		end
+		
+	end
+	
+end)
