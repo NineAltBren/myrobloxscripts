@@ -7,6 +7,7 @@ function RemoveTerrain()
 		local MaterialService = game:GetService("MaterialService")
 		
 		local MaterialVariant = Instance.new("MaterialVariant")
+		MaterialVariant.BaseMaterial = Material
 		MaterialVariant.Parent = MaterialService
 		
 		pcall(function()
